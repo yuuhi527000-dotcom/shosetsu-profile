@@ -705,9 +705,12 @@ async function generate() {
   const BOT_Y = WORKS_Y + (works.length > 0 ? workBoxH + 46 : 0);
   const H = BOT_Y + BOT_H + 30;
 
+  const SCALE = 2;
   const cvs = document.getElementById('c');
-  cvs.width = W; cvs.height = H;
+  cvs.width = W * SCALE; cvs.height = H * SCALE;
+  cvs.style.width = W + 'px'; cvs.style.height = H + 'px';
   const ctx = cvs.getContext('2d');
+  ctx.scale(SCALE, SCALE);
 
   ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
   T.lineFn(ctx, W, H);
