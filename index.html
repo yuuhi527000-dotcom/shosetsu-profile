@@ -24,7 +24,6 @@ body {
 }
 
 /* ===== AD SLOTS ===== */
-.ad-slot {
   width: 100%;
   background: #fff;
   border: 1px solid #e8ddd0;
@@ -34,7 +33,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-.ad-slot::before {
   content: '広告';
   position: absolute;
   top: 4px;
@@ -44,14 +42,11 @@ body {
   letter-spacing: .08em;
   pointer-events: none;
 }
-.ad-slot ins { display: block; width: 100%; }
 /* ページ最上部・最下部: 728×90 (leaderboard) */
-.ad-top, .ad-bottom {
   height: 100px;
   min-height: 90px;
 }
 /* 生成ボタン上下: 336×280 (large rectangle) */
-.ad-before-btn, .ad-after-btn {
   min-height: 280px;
   border-radius: 8px;
   margin: 12px 0;
@@ -256,7 +251,6 @@ textarea { resize: vertical; min-height: 54px; font-size: 12px; }
 .img-up .ov span { color: #fff; font-size: 11px; }
 
 /* ===== AD DIVIDER in form col ===== */
-.ad-in-form {
   border-radius: 8px;
   overflow: hidden;
 }
@@ -385,11 +379,6 @@ canvas { display: none; }
 </head>
 <body>
 
-<!-- ===== AD: ページ最上部 ===== -->
-<div class="ad-slot ad-top">
-  <!-- 自動広告がここに表示されます -->
-</div>
-
 <!-- ===== HEADER ===== -->
 <header class="site-header">
   <div>
@@ -496,17 +485,7 @@ canvas { display: none; }
         <input type="text" id="charTypes" placeholder="ぽんこつ, 無自覚たらし, クール後輩"/>
       </div>
 
-      <!-- ===== AD: 生成ボタン上 ===== -->
-      <div class="ad-slot ad-before-btn ad-in-form">
-        <!-- 自動広告がここに表示されます -->
-      </div>
-
       <button class="btn-gen" onclick="generate()">✦ カードを生成する ✦</button>
-
-      <!-- ===== AD: 生成ボタン下 ===== -->
-      <div class="ad-slot ad-after-btn ad-in-form">
-        <!-- 自動広告がここに表示されます -->
-      </div>
 
     </div><!-- /form-col -->
 
@@ -534,11 +513,6 @@ canvas { display: none; }
       <div class="step"><div class="num">04</div><p>PNGでダウンロード<br>Xのリプライやプロフィールに貼り付けて完成！</p></div>
     </div>
   </section>
-</div>
-
-<!-- ===== AD: ページ最下部 ===== -->
-<div class="ad-slot ad-bottom">
-  <!-- 自動広告がここに表示されます -->
 </div>
 
 <!-- ===== FOOTER ===== -->
