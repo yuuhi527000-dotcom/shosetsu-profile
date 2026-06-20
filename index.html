@@ -847,7 +847,7 @@ async function generate() {
   }
 
   const botY = BOT_Y, colW = Math.floor((W - PAD*2 - GAP*2) / 3);
-  [{ label:'🐾 好きなもの', bg:LBOX },{ label:'書いているもの', bg:DBOX },{ label:'好きなキャラ', bg:LBOX }].forEach((col, ci) => {
+  [{ label:'🐾 好きなもの', bg:LBOX },{ label:'書いているもの', bg:LBOX },{ label:'好きなキャラ', bg:LBOX }].forEach((col, ci) => {
     const bx = PAD + ci*(colW+GAP);
     ctx.fillStyle = col.bg; rr(ctx, bx, botY, colW, BOT_H, 6); ctx.fill();
     ctx.strokeStyle = BTHIN; ctx.lineWidth = 1; rr(ctx, bx, botY, colW, BOT_H, 6); ctx.stroke();
@@ -864,7 +864,7 @@ async function generate() {
     ctx.fillStyle = INK; ctx.fillText(lt, PAD+3+col*(colW/2), botY+28+row*18);
   });
   const bx1 = PAD + colW + GAP;
-  ctx.fillStyle = T.isLight ? 'rgba(10,5,0,0.8)' : 'rgba(240,230,210,0.88)'; ctx.font = '400 10px "Zen Kaku Gothic New",sans-serif';
+  ctx.fillStyle = INK; ctx.font = '400 10px "Zen Kaku Gothic New",sans-serif';
   let wy2 = botY + 28;
   writing.split('\n').forEach(line => {
     if (wy2 > botY + BOT_H - 10) return;
