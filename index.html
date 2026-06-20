@@ -763,7 +763,8 @@ async function generate() {
   }
 
   const boxY = MID_Y;
-  ctx.fillStyle = DBOX; rr(ctx, PAD, boxY, halfBW, midBoxH, 6); ctx.fill();
+  ctx.fillStyle = LBOX; rr(ctx, PAD, boxY, halfBW, midBoxH, 6); ctx.fill();
+  ctx.strokeStyle = BTHIN; ctx.lineWidth = 1; rr(ctx, PAD, boxY, halfBW, midBoxH, 6); ctx.stroke();
   ctx.fillStyle = ACC; ctx.font = '700 10px "Zen Kaku Gothic New",sans-serif';
   ctx.textAlign = 'center'; ctx.fillText('——活動場所——', PAD+halfBW/2, boxY+15); ctx.textAlign = 'left';
   platforms.forEach((p, i) => {
@@ -771,7 +772,7 @@ async function generate() {
     let ps = 12; ctx.font = ps + 'px "Zen Kaku Gothic New",sans-serif';
     const txt = '📖 ' + p;
     while (ctx.measureText(txt).width > halfBW/2-8 && ps > 8) { ps--; ctx.font = ps + 'px "Zen Kaku Gothic New",sans-serif'; }
-    ctx.fillStyle = WHITE; ctx.fillText(txt, PAD+6+col*(halfBW/2), boxY+30+row*18);
+    ctx.fillStyle = INK; ctx.fillText(txt, PAD+6+col*(halfBW/2), boxY+30+row*18);
   });
 
   const wBoxY = boxY + platH + GAP;
